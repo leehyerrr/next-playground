@@ -33,7 +33,7 @@ export default function ModalFramer() {
             {/* 모달 박스 */}
             <motion.div
               key="modal"
-              className="fixed top-1/2 left-1/2 w-80 bg-white p-6 rounded-xl shadow-lg -translate-x-1/2 -translate-y-1/2"
+              className="fixed top-1/2 left-1/2 w-80 bg-white p-6 rounded-xl shadow-lg -translate-x-1/2 -translate-y-1/2 text-cyan-500"
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -100, opacity: 0 }}

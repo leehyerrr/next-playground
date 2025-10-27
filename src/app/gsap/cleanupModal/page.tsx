@@ -59,7 +59,7 @@ export default function ModalGSAP() {
       {open && (
         <div
           ref={modalRef}
-          className="fixed top-1/2 left-1/2 w-80 bg-white p-6 rounded-xl shadow-lg -translate-x-1/2 -translate-y-1/2"
+          className="fixed top-1/2 left-1/2 w-80 bg-white p-6 rounded-xl shadow-lg -translate-x-1/2 -translate-y-1/2 text-blue-700"
         >
           <h2 className="text-lg font-bold mb-4">GSAP 모달</h2>
           <p className="mb-6">GSAP으로 구현한 위→아래 애니메이션</p>
