@@ -7,7 +7,7 @@ function ServerAction() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    searchUsers("Bob").then((data) => setUsers(data.user));
+    searchUsers("Bob").then((data) => setUsers(data));
   }, []);
 
   return (

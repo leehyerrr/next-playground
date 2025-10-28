@@ -8,7 +8,7 @@ const DB = [
 ];
 
 const searchUsers = async (name: string) => {
-  DB.filter((user) => user.name.includes(name));
+  return DB.filter((user) => user.name.includes(name));
 };
 
 export default searchUsers;
