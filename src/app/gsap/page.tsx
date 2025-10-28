@@ -18,8 +18,11 @@ export default function Boxes() {
     const ctx = gsap.context((self) => {
       // use the context selector if available, otherwise fall back to the container's querySelectorAll
       const selector = (self?.selector ??
-        ((s: string) => container.current?.querySelectorAll(s))) as any;
-      const boxes = (selector(".box") ?? []) as any;
+        ((s: string) => container.current?.querySelectorAll(s))) as unknown as (
+        s: string
+      ) => NodeListOf<Element> | undefined;
+      const nodeList = selector(".box");
+      const boxes: Element[] = nodeList ? Array.from(nodeList) : [];
       tl.current = gsap
         .timeline()
         .to(boxes[0], { x: 120, rotation: 360 })
